@@ -9,6 +9,14 @@ const PetsService = {
     }
     // petsQueue.display();
   },
+  getAllPets() {
+    let firstPet = petsQueue.peek();
+    let petsDbMinusFirst = petsDb.filter(pet => pet.id !== firstPet.id);
+    return petsDbMinusFirst;
+  },
+  getCurrentPet() {
+    return petsQueue.peek();
+  },
   adopt(id) {
     // let pet = petsDb.find(pet => pet.id === id);
     let pet = petsQueue.dequeue();

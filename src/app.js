@@ -13,19 +13,24 @@ app.use(
   })
 );
 
+PetsService.buildQueue();
+
 /*******************************************************************
   ENDPOINTS
 *******************************************************************/
-// app.get('/api/cat', (req, res, next) => {
-//   return res.json();
-// });
+app.get('/api/pets', (req, res, next) => {
+  let allPets = PetsService.getAllPets();
+  return res.json(allPets);
+});
+
+app.get('/api/currentpet', (req, res, next) => {
+  let currentPet = PetsService.getCurrentPet();
+  return res.json(currentPet);
+});
 
 app.delete('/api/adopt/:id', (req, res, next) => {
-  PetsService.adopt(req.params.id)
-    .then(() => {
-      return res.status(204).end();
-    })
-    .catch(next);
+  PetsService.adopt(req.params.id);
+  return res.status(204).end();
 });
 
 /*******************************************************************
