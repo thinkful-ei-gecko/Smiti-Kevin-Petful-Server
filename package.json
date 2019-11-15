@@ -1,9 +1,9 @@
 {
   "name": "petful.server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Petful Server",
   "keywords": [],
-  "author": "Alex Cumbo",
+  "author": "Smiti Shakya, Kevin Wei",
   "license": "UNLICENSED",
   "main": "server.js",
   "scripts": {
@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "faker": "^4.1.0",
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.19.4"
   }
 }
