@@ -9,7 +9,6 @@ const petsDb = [
     age: 2,
     breed: 'Bengal',
     story: 'Thrown on the street',
-    id: 0,
     timeEntered: Math.random(),
     available: true,
   },
@@ -22,7 +21,6 @@ const petsDb = [
     age: 3,
     breed: 'Golden Retriever',
     story: 'Owner Passed away',
-    id: 1,
     timeEntered: Math.random(),
     available: true,
   }

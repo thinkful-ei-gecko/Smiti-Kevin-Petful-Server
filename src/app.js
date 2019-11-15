@@ -28,8 +28,8 @@ app.get('/api/currentpet', (req, res, next) => {
   return res.json(currentPet);
 });
 
-app.delete('/api/adopt/:id', (req, res, next) => {
-  PetsService.adopt(req.params.id);
+app.delete('/api/adopt', (req, res, next) => {
+  PetsService.adopt();
   return res.status(204).end();
 });
 

@@ -17,8 +17,7 @@ const PetsService = {
   getCurrentPet() {
     return petsQueue.peek();
   },
-  adopt(id) {
-    // let pet = petsDb.find(pet => pet.id === id);
+  adopt() {
     let pet = petsQueue.dequeue();
     pet.available = false;
     // return pet;
