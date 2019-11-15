@@ -28,8 +28,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL:
-      'https://placedog.net/500',
+    imageURL: faker.image.animals(),
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -41,8 +40,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL:
-      'https://placedog.net/500',
+    imageURL: faker.image.animals(),
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -54,8 +52,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL:
-      'https://placedog.net/500',
+    imageURL: faker.image.animals(),
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -67,8 +64,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL:
-      'https://placedog.net/500',
+    imageURL: faker.image.animals(),
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -80,8 +76,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL:
-      'https://placedog.net/500',
+    imageURL: faker.image.animals(),
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -93,8 +88,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL:
-      'https://placedog.net/500',
+    imageURL: faker.image.animals(),
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -106,8 +100,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL:
-      'https://placedog.net/500',
+    imageURL: faker.image.animals(),
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -119,8 +112,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL:
-      'https://placedog.net/500',
+    imageURL: faker.image.animals(),
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -130,7 +122,7 @@ const petsDb = [
     id: faker.random.uuid(),
     timeEntered: Math.random(),
     available: true,
-  }
+  },
 ];
 
 const petsQueue = new Queue();
