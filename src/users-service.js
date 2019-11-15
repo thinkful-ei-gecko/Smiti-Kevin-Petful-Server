@@ -28,6 +28,4 @@ const UsersService = {
   }
 };
 
-UsersService.buildQueue();
-
 module.exports = UsersService;
