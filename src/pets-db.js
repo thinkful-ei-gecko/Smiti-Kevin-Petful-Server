@@ -28,7 +28,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL: faker.image.animals(),
+    imageURL: `https://placedog.net/500?random=${Math.random()}`,
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -40,7 +40,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL: faker.image.animals(),
+    imageURL: `https://placedog.net/500?random=${Math.random()}`,
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -52,7 +52,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL: faker.image.animals(),
+    imageURL: `https://placedog.net/500?random=${Math.random()}`,
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -64,7 +64,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL: faker.image.animals(),
+    imageURL: `https://placedog.net/500?random=${Math.random()}`,
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -76,7 +76,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL: faker.image.animals(),
+    imageURL: `https://placedog.net/500?random=${Math.random()}`,
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -88,7 +88,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL: faker.image.animals(),
+    imageURL: `https://placedog.net/500?random=${Math.random()}`,
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -100,7 +100,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL: faker.image.animals(),
+    imageURL: `https://placedog.net/500?random=${Math.random()}`,
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
@@ -112,7 +112,7 @@ const petsDb = [
     available: true,
   },
   {
-    imageURL: faker.image.animals(),
+    imageURL: `https://placedog.net/500?random=${Math.random()}`,
     imageDescription: faker.lorem.sentence(),
     name: faker.name.firstName(),
     sex: faker.lorem.word(),
