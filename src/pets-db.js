@@ -1,4 +1,5 @@
 const Queue = require('./queue');
+const faker = require('faker');
 
 const petsDb = [
   {
@@ -9,7 +10,7 @@ const petsDb = [
     age: 2,
     breed: 'Bengal',
     story: 'Thrown on the street',
-    id: 0,
+    id: faker.random.uuid(),
     timeEntered: Math.random(),
     available: true,
   },
@@ -22,7 +23,111 @@ const petsDb = [
     age: 3,
     breed: 'Golden Retriever',
     story: 'Owner Passed away',
-    id: 1,
+    id: faker.random.uuid(),
+    timeEntered: Math.random(),
+    available: true,
+  },
+  {
+    imageURL:
+      'https://placedog.net/500',
+    imageDescription: faker.lorem.sentence(),
+    name: faker.name.firstName(),
+    sex: faker.lorem.word(),
+    age: faker.random.number(),
+    breed: faker.lorem.words(),
+    story: faker.lorem.sentence(),
+    id: faker.random.uuid(),
+    timeEntered: Math.random(),
+    available: true,
+  },
+  {
+    imageURL:
+      'https://placedog.net/500',
+    imageDescription: faker.lorem.sentence(),
+    name: faker.name.firstName(),
+    sex: faker.lorem.word(),
+    age: faker.random.number(),
+    breed: faker.lorem.words(),
+    story: faker.lorem.sentence(),
+    id: faker.random.uuid(),
+    timeEntered: Math.random(),
+    available: true,
+  },
+  {
+    imageURL:
+      'https://placedog.net/500',
+    imageDescription: faker.lorem.sentence(),
+    name: faker.name.firstName(),
+    sex: faker.lorem.word(),
+    age: faker.random.number(),
+    breed: faker.lorem.words(),
+    story: faker.lorem.sentence(),
+    id: faker.random.uuid(),
+    timeEntered: Math.random(),
+    available: true,
+  },
+  {
+    imageURL:
+      'https://placedog.net/500',
+    imageDescription: faker.lorem.sentence(),
+    name: faker.name.firstName(),
+    sex: faker.lorem.word(),
+    age: faker.random.number(),
+    breed: faker.lorem.words(),
+    story: faker.lorem.sentence(),
+    id: faker.random.uuid(),
+    timeEntered: Math.random(),
+    available: true,
+  },
+  {
+    imageURL:
+      'https://placedog.net/500',
+    imageDescription: faker.lorem.sentence(),
+    name: faker.name.firstName(),
+    sex: faker.lorem.word(),
+    age: faker.random.number(),
+    breed: faker.lorem.words(),
+    story: faker.lorem.sentence(),
+    id: faker.random.uuid(),
+    timeEntered: Math.random(),
+    available: true,
+  },
+  {
+    imageURL:
+      'https://placedog.net/500',
+    imageDescription: faker.lorem.sentence(),
+    name: faker.name.firstName(),
+    sex: faker.lorem.word(),
+    age: faker.random.number(),
+    breed: faker.lorem.words(),
+    story: faker.lorem.sentence(),
+    id: faker.random.uuid(),
+    timeEntered: Math.random(),
+    available: true,
+  },
+  {
+    imageURL:
+      'https://placedog.net/500',
+    imageDescription: faker.lorem.sentence(),
+    name: faker.name.firstName(),
+    sex: faker.lorem.word(),
+    age: faker.random.number(),
+    breed: faker.lorem.words(),
+    story: faker.lorem.sentence(),
+    id: faker.random.uuid(),
+    timeEntered: Math.random(),
+    available: true,
+  },
+  {
+    imageURL:
+      'https://placedog.net/500',
+    imageDescription: faker.lorem.sentence(),
+    name: faker.name.firstName(),
+    sex: faker.lorem.word(),
+    age: faker.random.number(),
+    breed: faker.lorem.words(),
+    story: faker.lorem.sentence(),
+    id: faker.random.uuid(),
     timeEntered: Math.random(),
     available: true,
   }
