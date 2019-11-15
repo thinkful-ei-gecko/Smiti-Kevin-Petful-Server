@@ -3,6 +3,7 @@ const cors = require('cors');
 const app = express();
 const { CLIENT_ORIGIN } = require('./config');
 const PetsService = require('./pets-service');
+const UsersService = require('./users-service');
 
 /*******************************************************************
   MIDDLEWARE
@@ -14,6 +15,7 @@ app.use(
 );
 
 PetsService.buildQueue();
+UsersService.buildQueue();
 
 /*******************************************************************
   ENDPOINTS
