@@ -10,9 +10,8 @@ const UsersService = {
         timeEntered: Math.random(),
       });
     }
-    let usersDbSorted = usersDb.slice(0);
-    usersDbSorted.sort((a, b) => (a.timeEntered < b.timeEntered) ? -1 : 1);
-    for (let user of usersDbSorted) {
+    usersDb.sort((a, b) => (a.timeEntered < b.timeEntered) ? -1 : 1);
+    for (let user of usersDb) {
       usersQueue.enqueue(user);
     }
     // usersQueue.display();

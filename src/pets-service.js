@@ -2,9 +2,8 @@ const { petsDb, petsQueue } = require('./pets-db');
 
 const PetsService = {
   buildQueue() {
-    let petsDbSorted = petsDb.slice(0);
-    petsDbSorted.sort((a, b) => (a.timeEntered < b.timeEntered) ? -1 : 1);
-    for(let pet of petsDbSorted) {
+    petsDb.sort((a, b) => (a.timeEntered < b.timeEntered) ? -1 : 1);
+    for(let pet of petsDb) {
       petsQueue.enqueue(pet);
     }
     // petsQueue.display();
