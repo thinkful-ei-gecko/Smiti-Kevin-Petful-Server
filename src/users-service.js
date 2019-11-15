@@ -24,7 +24,8 @@ const UsersService = {
     return currUsersInLine.map(user => user.data.name);
   },
   getNextUser() {
-    return usersQueue.dequeue();
+    let user = usersQueue.dequeue();
+    return user.name;
   }
 };
 
