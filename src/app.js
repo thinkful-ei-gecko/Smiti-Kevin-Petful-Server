@@ -35,6 +35,16 @@ app.delete('/api/adopt', (req, res, next) => {
   return res.status(204).end();
 });
 
+app.get('/api/users', (req, res, next) => {
+  let usersinline = UsersService.getUsersInLine();
+  return res.json(usersinline);
+});
+
+app.get('/api/currentuser', (req, res, next) => {
+  let currentuser = UsersService.getNextUser();
+  return res.json(currentuser);
+});
+
 /*******************************************************************
   ERROR HANDLING
 *******************************************************************/

@@ -13,9 +13,8 @@ class Queue {
 
   display() {
     if (this.first === null) {
-      return;
+      return null;
     }
-
     let curr = this.first;
     while (curr !== null) {
       console.log({
@@ -24,6 +23,19 @@ class Queue {
       });
       curr = curr.next;
     }
+  }
+
+  toArray() {
+    if (this.first === null) {
+      return null;
+    }
+    let arr = [];
+    let curr = this.first;
+    while (curr !== null) {
+      arr.push(curr);
+      curr = curr.next;
+    }
+    return arr;
   }
 
   peek() {
@@ -44,7 +56,7 @@ class Queue {
   dequeue() {
     let node = this.first;
     if (node === null) {
-      return;
+      return null;
     }
     this.first = node.next;
     if (node === this.last) {

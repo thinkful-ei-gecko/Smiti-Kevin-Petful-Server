@@ -14,8 +14,18 @@ const UsersService = {
     for (let user of usersDb) {
       usersQueue.enqueue(user);
     }
+    usersQueue.enqueue({
+      name: 'YOU'
+    });
     // usersQueue.display();
   },
+  getUsersInLine() {
+    let currUsersInLine = usersQueue.toArray();
+    return currUsersInLine.map(user => user.data.name);
+  },
+  getNextUser() {
+    return usersQueue.dequeue();
+  }
 };
 
 UsersService.buildQueue();
