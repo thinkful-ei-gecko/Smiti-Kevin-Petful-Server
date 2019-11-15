@@ -10,23 +10,26 @@ const UsersService = {
         timeEntered: Math.random(),
       });
     }
-    usersDb.sort((a, b) => (a.timeEntered < b.timeEntered) ? -1 : 1);
+    usersDb.sort((a, b) => (a.timeEntered < b.timeEntered ? -1 : 1));
     for (let user of usersDb) {
       usersQueue.enqueue(user);
     }
     usersQueue.enqueue({
-      name: 'YOU'
+      name: 'YOU',
     });
     // usersQueue.display();
   },
   getUsersInLine() {
     let currUsersInLine = usersQueue.toArray();
-    return currUsersInLine.map(user => user.data.name);
+    return currUsersInLine.map((user) => user.data.name);
   },
   getNextUser() {
     let user = usersQueue.dequeue();
-    return user.name;
-  }
+    if (user) {
+      return user.name;
+    }
+    return null;
+  },
 };
 
 module.exports = UsersService;
