@@ -2,16 +2,14 @@ const { petsDb, petsQueue } = require('./pets-db');
 
 const PetsService = {
   buildQueue() {
-    petsDb.sort((a, b) => (a.timeEntered < b.timeEntered) ? -1 : 1);
-    for(let pet of petsDb) {
+    petsDb.sort((a, b) => (a.timeEntered < b.timeEntered ? -1 : 1));
+    for (let pet of petsDb) {
       petsQueue.enqueue(pet);
     }
     // petsQueue.display();
   },
   getAllPets() {
-    let firstPet = petsQueue.peek();
-    let petsDbMinusFirst = petsDb.filter(pet => pet.id !== firstPet.id);
-    return petsDbMinusFirst;
+    return petsDb;
   },
   getCurrentPet() {
     return petsQueue.peek();
@@ -20,7 +18,7 @@ const PetsService = {
     let pet = petsQueue.dequeue();
     pet.available = false;
     // return pet;
-  }
+  },
 };
 
 module.exports = PetsService;
