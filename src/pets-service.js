@@ -10,7 +10,10 @@ const PetsService = {
     // petsQueue.display();
   },
   adopt(id) {
-    
+    // let pet = petsDb.find(pet => pet.id === id);
+    let pet = petsQueue.dequeue();
+    pet.available = false;
+    // return pet;
   }
 };
 

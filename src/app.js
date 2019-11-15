@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const { CLIENT_ORIGIN } = require('./config');
+const PetsService = require('./pets-service');
 
 /*******************************************************************
   MIDDLEWARE
@@ -15,8 +16,16 @@ app.use(
 /*******************************************************************
   ENDPOINTS
 *******************************************************************/
-app.get('/api/cat', (req, res, next) => {
-  return res.json();
+// app.get('/api/cat', (req, res, next) => {
+//   return res.json();
+// });
+
+app.delete('/api/adopt/:id', (req, res, next) => {
+  PetsService.adopt(req.params.id)
+    .then(() => {
+      return res.status(204).end();
+    })
+    .catch(next);
 });
 
 /*******************************************************************
