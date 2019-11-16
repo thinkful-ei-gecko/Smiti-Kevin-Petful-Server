@@ -23,7 +23,7 @@ const UsersService = {
   },
   getUsersInLine() {
     let currUsersInLine = usersQueue.toArray();
-    return currUsersInLine.map((user) => user.data.name);
+    return currUsersInLine ? currUsersInLine.map((user) => user.data.name) : null;
   },
   getNextUser() {
     let user = usersQueue.dequeue();
