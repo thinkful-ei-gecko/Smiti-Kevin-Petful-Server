@@ -3,7 +3,7 @@ const { _petsDb_Backup } = require('./pets-db');
 
 const PetsService = {
   buildQueue() {
-    petsDb = _petsDb_Backup.slice(0);
+    petsDb = JSON.parse(JSON.stringify(_petsDb_Backup));
     petsDb.sort((a, b) => (a.timeEntered < b.timeEntered ? -1 : 1));
     petsQueue.flush();
     for (let pet of petsDb) {
