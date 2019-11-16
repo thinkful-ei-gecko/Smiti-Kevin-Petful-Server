@@ -1,7 +1,7 @@
 const Queue = require('./queue');
 const faker = require('faker');
 
-const petsDb = [
+const _petsDb_Backup = [
   {
     imageURL: 'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg',
     imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
@@ -125,6 +125,7 @@ const petsDb = [
   },
 ];
 
-const petsQueue = new Queue();
+let petsDb = [];
+let petsQueue = new Queue();
 
-module.exports = { petsDb, petsQueue };
+module.exports = { petsDb, petsQueue, _petsDb_Backup };

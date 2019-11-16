@@ -11,6 +11,11 @@ class Queue {
     this.last = null;
   }
 
+  flush() {
+    this.first = null;
+    this.last = null;
+  }
+
   display() {
     if (this.first === null) {
       return null;

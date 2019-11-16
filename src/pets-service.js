@@ -1,8 +1,11 @@
-const { petsDb, petsQueue } = require('./pets-db');
+let { petsDb, petsQueue } = require('./pets-db');
+const { _petsDb_Backup } = require('./pets-db');
 
 const PetsService = {
   buildQueue() {
+    petsDb = _petsDb_Backup.slice(0);
     petsDb.sort((a, b) => (a.timeEntered < b.timeEntered ? -1 : 1));
+    petsQueue.flush();
     for (let pet of petsDb) {
       petsQueue.enqueue(pet);
     }
@@ -16,7 +19,7 @@ const PetsService = {
     while(currentPet && !currentPet.data.available) {
       currentPet = currentPet.next;
     }
-    return currentPet.data;
+    return currentPet ? currentPet.data : null;
   },
   adopt() {
     let pet = petsQueue.dequeue();

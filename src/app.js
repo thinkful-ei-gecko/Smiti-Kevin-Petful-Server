@@ -45,6 +45,12 @@ app.get('/api/currentuser', (req, res, next) => {
   return res.json(currentuser);
 });
 
+app.patch('/api/server', (req, res, next) => {
+  PetsService.buildQueue();
+  UsersService.buildQueue();
+  return res.json('server restarted');
+});
+
 /*******************************************************************
   ERROR HANDLING
 *******************************************************************/

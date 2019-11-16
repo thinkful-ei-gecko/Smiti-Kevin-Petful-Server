@@ -1,6 +1,6 @@
 const Queue = require('./queue');
 
-const usersDb = [];
-const usersQueue = new Queue();
+let usersDb = [];
+let usersQueue = new Queue();
 
 module.exports = { usersDb, usersQueue };

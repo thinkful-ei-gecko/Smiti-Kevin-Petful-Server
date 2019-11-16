@@ -1,8 +1,9 @@
-const { usersDb, usersQueue } = require('./users-db');
+let { usersDb, usersQueue } = require('./users-db');
 const faker = require('faker');
 
 const UsersService = {
   buildQueue() {
+    usersDb = [];
     for (let i = 0; i < 10; i++) {
       usersDb.push({
         name: faker.name.findName(),
@@ -11,6 +12,7 @@ const UsersService = {
       });
     }
     usersDb.sort((a, b) => (a.timeEntered < b.timeEntered ? -1 : 1));
+    usersQueue.flush();
     for (let user of usersDb) {
       usersQueue.enqueue(user);
     }
