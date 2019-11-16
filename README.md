@@ -40,13 +40,13 @@ Returns a JSON array of all pet objects in this format:
 ```
 ### ``` GET /api/currentpet```
 Returns a JSON object of the pet in the above format.
-### ``` GET /api/adopt```
+### ``` DELETE /api/adopt```
 Removes the first pet in the pets queue.
 ### ``` GET /api/users```
 Returns a list of user names waiting in line.
 ### ``` GET /api/currentuser```
 Returns a name of the first user in the user queue.
-### ``` GET /api/server```
+### ``` PATCH /api/server```
 Resets the pets and users queue on the server
 
 ## Tech Used
