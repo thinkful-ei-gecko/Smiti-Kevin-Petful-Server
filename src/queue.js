@@ -39,7 +39,7 @@ class Queue {
   }
 
   peek() {
-    return this.first ? this.first.data : null;
+    return this.first;
   }
 
   enqueue(data) {

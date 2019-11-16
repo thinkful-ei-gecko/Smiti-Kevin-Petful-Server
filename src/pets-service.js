@@ -12,7 +12,11 @@ const PetsService = {
     return petsDb;
   },
   getCurrentPet() {
-    return petsQueue.peek();
+    let currentPet = petsQueue.peek();
+    while(currentPet && !currentPet.data.available) {
+      currentPet = currentPet.next;
+    }
+    return currentPet.data;
   },
   adopt() {
     let pet = petsQueue.dequeue();
